@@ -30,17 +30,15 @@ int main() {
             ht--;    
         }
     }
-    
 
     printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", ht, mt);
 
     
     return 0;
-
 }
-
-
-//formula faz com que horas iguais que resultariam em 24 horas de 0, entao
+/*
+    //1.1
+    //formula faz com que horas iguais que resultariam em 24 horas de 0, entao
     //se as horas forem iguais entao hora final recebe 24
     //minutos precisam ser diferentes de 0 pois esses casos denotam jogos de menos de uma hora
     //if (hf == hi && (mf > 0 || mi > 0)) {
@@ -55,7 +53,8 @@ int main() {
 
 
 
-/*
+
+    //1.0
     if (hf == 0 && hi == 0){
         ht = 0;
     }
@@ -78,9 +77,6 @@ int main() {
         ht = 24 + (hf - hi);
     }
     
-
-    
-    
     //minutos iguais
     if (mf == mi) {
         mt = 0;
@@ -97,6 +93,4 @@ int main() {
         }
         
     }
-    
-    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", ht, mt);
-    */
+*/
