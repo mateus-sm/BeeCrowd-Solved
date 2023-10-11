@@ -9,4 +9,4 @@ while numero >= 0:
 
 media = media / contador
 
-print("%d" %media)
+print("%.2f" %media)
