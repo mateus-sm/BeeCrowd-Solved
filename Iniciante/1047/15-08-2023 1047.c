@@ -7,6 +7,49 @@ int main() {
     scanf("%d %d %d %d", &hi, &mi, &hf, &mf);
 
     //calcula horas
+    if (hf > hi) {
+        ht = hf - hi;
+    } else {
+        if (hf < hi) {
+            ht = 24 + (hf - hi);
+        } else {
+            if (hf == hi) {
+            ht = 24;
+
+                //nem sempre horas iguais significam 24 horas
+                //no caso de jogos que começaram 1 e 2 e foram até 1 e 3 o algoritmo estava acusando 24 horas
+                if (mf - mi > 0){
+                ht = 0;
+                }
+            }
+        }
+    }
+
+    //calcula minutos
+    if (mf > mi) {
+        mt = mf - mi;
+    } else {
+        if (mf < mi) { 
+            //quando o minuto inicial é maior que o final os minutos implicam uma hora a menos
+            mt = 60 + (mf - mi);
+                if (ht > 0) {
+                    ht--;    
+                }    
+        } else {
+            if (mf == mi) {
+                mt = 0;
+            }
+        }
+    }
+
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", ht, mt);
+
+    return 0;
+}
+
+/*
+    //1.2
+        //calcula horas
     ht = (hf - hi + 24) % 24;
 
     //tratar 24 horas
@@ -20,6 +63,7 @@ int main() {
         }
     }
 
+
     //calcula minutos
     mt = (mf - mi + 60) % 60;
 
@@ -31,12 +75,7 @@ int main() {
         }
     }
 
-    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n", ht, mt);
 
-    
-    return 0;
-}
-/*
     //1.1
     //formula faz com que horas iguais que resultariam em 24 horas de 0, entao
     //se as horas forem iguais entao hora final recebe 24
@@ -49,9 +88,6 @@ int main() {
     //if (hf == 24) {
     //    mf = 0;
     //}
-
-
-
 
 
     //1.0
