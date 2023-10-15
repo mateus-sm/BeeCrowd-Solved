@@ -1,28 +1,24 @@
 #include <stdio.h>
  
 int main() {
- 
-    int x, y, somax = 0, somay = 0, total = 0;
+    int inicio, fim, aux, somaimpar = 0;
 
-    scanf("%d %d", &x, &y);
+    scanf("%d %d", &inicio, &fim);
 
-    if (x > y) {
-        while (x > y) {
-            if (y % 2 != 0) {
-                total += y;
-            }
-            ++y;
-        }
-    } else {
-        while (y > x) {
-            if (x % 2 != 0) {
-                total += x;
-            }
-            ++x;
-        }
+    if (inicio > fim) {
+        aux = inicio;
+        inicio = fim;
+        fim = aux;
     }
 
-    printf("%d\n", total);
- 
-    return 0;
+    for (inicio = inicio + 1; inicio < fim; inicio++) {
+        if (inicio % 2 != 0) {
+            somaimpar += inicio;
+            //printf("%d\n", inicio); 
+        }
+        
+    }
+
+    printf("%d\n", somaimpar);
+
 }
