@@ -6,11 +6,9 @@ int main() {
 
     scanf("%d", &n);
 
-    for(i = 2; i <= n; i++) {
-
+    for(i = 2; i <= n; i += 2) {
         a = i * i;
         printf("%d^2 = %d\n", i, a);
-        i++;
     }
  
     return 0;
