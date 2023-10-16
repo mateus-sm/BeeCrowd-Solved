@@ -14,7 +14,7 @@ int main() {
             ht = 24 + (hf - hi);
         } else {
             if (hf == hi) {
-            ht = 24;
+                ht = 24;
 
                 //nem sempre horas iguais significam 24 horas
                 //no caso de jogos que começaram 1 e 2 e foram até 1 e 3 o algoritmo estava acusando 24 horas
