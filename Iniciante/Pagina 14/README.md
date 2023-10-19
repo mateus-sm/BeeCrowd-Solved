@@ -1,0 +1,4 @@
+| Linguagem  | Completo |
+| -- | -- |
+| C | 🌱 |
+| Python | 🌱 |
