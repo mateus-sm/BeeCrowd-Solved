@@ -8,7 +8,7 @@ for i in range(6):
         positivo += 1
         total += valor
 
-media = valor / positivo
+media = total / positivo
 
 print("%.0lf valores positivos" %positivo)
 print("%.1lf" %media)

@@ -1,10 +1,9 @@
-n1, n2, n3, n4, n5, n6 = input().split()
-n1 = float(n1)
-n2 = float(n2)
-n3 = float(n3)
-n4 = float(n4)
-n5 = float(n5)
-n6 = float(n6)
+n1 = float(input())
+n2 = float(input())
+n3 = float(input())
+n4 = float(input())
+n5 = float(input())
+n6 = float(input())
 numbers = [n1, n2, n3, n4, n5, n6]
 contador = 0
 
@@ -12,4 +11,4 @@ for x in range(6):
     if numbers[x] > 0:
         contador += 1
 
-print("%d valores positivos\n" %contador)
+print("%d valores positivos" %contador)

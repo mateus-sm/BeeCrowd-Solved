@@ -1,8 +1,4 @@
-float_str = input()
-a, b, c = float_str.split()
-a = float(a)
-b = float(b)
-c = float(c)
+a, b, c = map(float, input().split())
 pi = 3.14159
 
 triangulo = (a * c) / 2

@@ -1,6 +1,6 @@
 valor = int(input())
-i = 0
+valor += 1
 
-for i in range(i, valor):
+for i in range(valor):
     if i % 2 != 0:
         print(i)
