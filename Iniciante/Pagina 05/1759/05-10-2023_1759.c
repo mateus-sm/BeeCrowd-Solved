@@ -17,7 +17,6 @@ int main() {
         contador--;
     }
  
-    
     printf("!\n");
 
     return 0;
