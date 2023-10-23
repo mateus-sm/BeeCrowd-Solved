@@ -1,9 +1,9 @@
 abas, acoes = map(int, input().split())
 
 for i in range(acoes):
-    char = input()
+    str = input()
 
-    if char == 'f':
+    if str == 'fechou':
         abas += 1
     else:
         abas -= 1
