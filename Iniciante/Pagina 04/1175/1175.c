@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define TF 5
+#define TF 20
 
 int main() {
     int vet[TF];
@@ -10,14 +10,14 @@ int main() {
     }
 
 
-    for (i = 0, j = 4; i < TF /2; i++, j--) {
+    for (i = 0, j = TF - 1; i < TF /2; i++, j--) {
         aux = vet[i];
         vet[i] = vet[j];
         vet[j] = aux;
     }
 
     for (i = 0; i < TF; i++) {
-        printf("vet[%d] = %d\n", i, vet[i]);
+        printf("N[%d] = %d\n", i, vet[i]);
     }
 
     return 0;
