@@ -9,7 +9,6 @@ int main() {
         scanf("%d", &vet[i]);
     }
 
-
     for (i = 0, j = TF - 1; i < TF /2; i++, j--) {
         aux = vet[i];
         vet[i] = vet[j];
