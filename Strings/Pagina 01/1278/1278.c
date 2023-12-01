@@ -1,21 +1,20 @@
 // Justificador 2
 #include <stdio.h>
 #include <string.h>
-#define TF 50
  
 int main() {
  
     int numcasos, i, l, c, TL, TFL, maior, pos, pos_espaco, termino, spc;
-    char mat[TF][TF];
+    char mat[100][51];
 
-    scanf("%d", &numcasos);
-    fflush(stdin);
+    scanf("%d ", &numcasos);
 
     while (numcasos != 0) {
         //para i menor que numero de casos
         TFL = 0;
         for (l = 0; l < numcasos; l++) {
             //pega string
+            fflush(stdin);
             gets(mat[l]);
             TFL++;
         }
@@ -94,8 +93,11 @@ int main() {
         }
         //printf("maior = %d\n", maior);
 	    
-       scanf("%d", &numcasos);
-       fflush(stdin);
+        scanf("%d ", &numcasos);
+
+        if (numcasos > 0) {
+            printf("\n");
+        }
     }
 
     return 0;

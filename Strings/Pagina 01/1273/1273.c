@@ -1,24 +1,23 @@
 // Justificador 1
 #include <stdio.h>
 #include <string.h>
-#define TF 50
  
 int main() {
  
-    int numcasos, i, l, c, TL, TFL, maior, pos, pos_espaco;
-    char mat[TF][TF];
+    int numcasos, i, l, c, TL, maior, pos, pos_espaco;
+    
+    scanf("%d ", &numcasos);
 
-    scanf("%d", &numcasos);
-    fflush(stdin);
+    while (numcasos > 0) {
 
-    while (numcasos != 0) {
+        char mat[numcasos][51];
+
         // Para i menor que numero de casos
-        TFL = 0;
         maior = 0;
         for (l = 0; l < numcasos; l++) {
             // Pega string
+            fflush(stdin);
             gets(mat[l]);
-            TFL++;
 
             // Calcula tamanho
             TL = strlen(mat[l]);
@@ -27,7 +26,7 @@ int main() {
             // Verifica maior string da matriz
             if (TL > maior) {
                 maior = TL;
-                pos = l;
+                //pos = l;
             }
         }
 
@@ -56,7 +55,6 @@ int main() {
         for (i = 0; i < numcasos; i++){
             printf("%*s\n", maior, mat[i]); 
         }
-	    
 
         //Prints para teste
         /*
@@ -69,8 +67,13 @@ int main() {
         printf("tamanho do maior = %d\n", maior);
         printf("pos do maior = %d\n", pos);
         */
-       scanf("%d", &numcasos);
-       fflush(stdin);
+        scanf("%d ", &numcasos);
+        fflush(stdin);
+
+        if (numcasos > 0) {
+            printf("\n");
+        }
+        
     }
 
     return 0;
