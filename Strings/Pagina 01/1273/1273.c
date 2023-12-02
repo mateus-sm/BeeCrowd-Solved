@@ -16,8 +16,7 @@ int main() {
         maior = 0;
         for (l = 0; l < numcasos; l++) {
             // Pega string
-            fflush(stdin);
-            gets(mat[l]);
+            scanf(" %[^\n]", &mat[l]);
 
             // Calcula tamanho
             TL = strlen(mat[l]);
@@ -30,9 +29,9 @@ int main() {
             }
         }
 
-        //IMPRESSÃO
+        // Impressão comum
         /*
-        //Passar por todas as linhas
+        // Passar por todas as linhas
         for (l = 0; l < TFL; l++){
 
             // Achar TL da string atual
@@ -51,7 +50,8 @@ int main() {
             printf("\n");
         }
         */
-        //IMPRESSAO 2.0
+
+        // Impressão com format string
         for (i = 0; i < numcasos; i++){
             printf("%*s\n", maior, mat[i]); 
         }
@@ -68,7 +68,6 @@ int main() {
         printf("pos do maior = %d\n", pos);
         */
         scanf("%d ", &numcasos);
-        fflush(stdin);
 
         if (numcasos > 0) {
             printf("\n");

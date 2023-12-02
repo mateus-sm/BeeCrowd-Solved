@@ -4,18 +4,17 @@
  
 int main() {
  
-    int numcasos, i, l, c, TL, TFL, maior, pos, pos_espaco, termino, spc;
+    int numcasos, i, l, TL, TFL, maior, pos, pos_espaco, termino, spc;
     char mat[100][51];
 
-    scanf("%d ", &numcasos);
+    scanf("%d", &numcasos);
 
     while (numcasos != 0) {
         //para i menor que numero de casos
         TFL = 0;
         for (l = 0; l < numcasos; l++) {
             //pega string
-            fflush(stdin);
-            gets(mat[l]);
+            scanf(" %[^\n]", mat[l]);
             TFL++;
         }
 
@@ -45,13 +44,6 @@ int main() {
                 
                 //nao encontrou nenhuma instancia onde tem dois espaços seguidos
                 if (pos == 0) {
-                    //depois de remanejar tudo, se o primeiro caracter da string for um espaço
-                    //faz remanejamento final
-                    if (mat[l][0] == ' ') {
-                        for (i = 0; i < TL; i++){
-                            mat[l][i] = mat[l][i + 1];
-                        }
-                    }
                     termino = 0;
                 } else {
                     //encontrou instancia onde tem dois espaços seguidos
@@ -93,7 +85,7 @@ int main() {
         }
         //printf("maior = %d\n", maior);
 	    
-        scanf("%d ", &numcasos);
+        scanf("%d", &numcasos);
 
         if (numcasos > 0) {
             printf("\n");
